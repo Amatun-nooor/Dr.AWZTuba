@@ -1,67 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dr. Amtul Wafi Tuba | Gynaecologist & Fertility Specialist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>Dr. Amtul Wafi Tuba | Gynaecologist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Three.js -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-  <ul class="nav-list">
-    <li><a href="#about" class="nav-link">About</a></li>
-    <li><a href="#services" class="nav-link">Services</a></li>
-    <li><a href="#contact" class="nav-link">Contact</a></li>
-    <li>
-      <button class="btn-appointment" onclick="openAppointment()">
-        Book an Appointment
-      </button>
-    </li>
+<!-- NAVBAR -->
+<nav>
+  <h3 class="logo">Dr. Amtul Wafi Tuba</h3>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button onclick="openAppointment()">Book Appointment</button></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
   <div class="hero-left">
-    <img src="doctor.jpg" alt="Dr. Amtul Wafi Tuba">
-  </div>
-
-  <div class="hero-content">
+    <img src="doctor.jpg" alt="Dr. Amtul Wafi Tuba" />
     <h1>Dr. Amtul Wafi Tuba</h1>
     <p>Consultant Gynaecologist • Laparoscopic Surgeon • Fertility Specialist</p>
-    <button class="btn-appointment large" onclick="openAppointment()">
-      Book an Appointment
-    </button>
+    <button class="primary-btn" onclick="openAppointment()">Book an Appointment</button>
   </div>
 
-  <div id="three-container"></div>
+  <div class="hero-right">
+    <div id="three-container"></div>
+  </div>
 </header>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about">
   <h2>About</h2>
   <p>
-    Dr. Amtul Wafi Tuba is a compassionate gynaecologist, laparoscopic surgeon,
-    and fertility specialist dedicated to advanced women’s healthcare.
+    Dr. Amtul Wafi Tuba is a highly experienced gynaecologist, laparoscopic surgeon,
+    and fertility specialist providing compassionate, patient-centric care.
   </p>
-  <p>
-    She is honored to have received the prestigious <strong>Dr. APJ Abdul Kalam Health and Medical Excellence Award (2023)</strong> recognizing her outstanding contributions to healthcare and commitment to improving women's health outcomes.  
+    <p>She is honored to have received the prestigious <strong>APJ Abdul Kalam Health and Medical Excellence Award (2023)</strong> recognizing her outstanding contributions to healthcare and commitment to improving women's health outcomes.  
   With years of experience and a patient-centered approach, Dr. Tuba blends advanced surgical techniques with personalized care to ensure the best possible results for her patients.
-</p>
+</p></p>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section">
+<section id="services">
   <h2>Services</h2>
-  <ul class="service-list">
+  <ul>
     <li>General Gynaecology Consultation</li>
     <li>High-Risk Pregnancy Care</li>
     <li>Laparoscopic & Minimally Invasive Surgery</li>
@@ -72,34 +65,39 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact">
   <h2>Contact</h2>
   <p>
-    📍 Clinic Address: Core Magnus Hospital, Pillar No.202, Behind D-Mart, Attapur, Hyderabad, Telangana, India<br>
-    🕒 Timings: Mon – Sat | 09:00 AM – 08:00 PM IST<br>
-    📞 Phone: +918074036731
+    📍 Core Magnus Hospital,Pillar no:202, Attapur, Hyderabad<br>
+    🕒 Mon – Sat | 09:00 AM – 08:00 PM<br>
+    📞 +91 8074036731
   </p>
+
+  <!-- EXTRA BOOK BUTTON -->
+  <button class="primary-btn" onclick="openAppointment()">Book an Appointment</button>
 </section>
 
 <!-- APPOINTMENT MODAL -->
 <div id="appointmentModal" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeAppointment()">&times;</span>
+    <span class="close" onclick="closeAppointment()">×</span>
     <iframe src="https://forms.gle/KcaabSYBuXSeakwj8"></iframe>
   </div>
 </div>
 
-<!-- FLOATING SOCIAL -->
-<div class="floating-buttons">
-  <a href="https://wa.me/918074036731" target="_blank" class="social-btn whatsapp">💬</a>
-  <a href="https://instagram.com/your_instagram_handle" target="_blank" class="social-btn instagram">📸</a>
+<!-- FLOATING BUTTONS -->
+<div class="floating">
+  <a href="https://wa.me/918074036731" class="whatsapp">💬</a>
+  <a href="https://instagram.com/yourhandle" class="instagram">📸</a>
+  <button class="chatbot">🤖</button>
 </div>
 
 <footer>
-  This website is for appointment booking only and does not provide medical advice.
+  <p>This website is for appointment booking only and does not provide medical advice.</p>
 </footer>
 
-<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>
+
+
