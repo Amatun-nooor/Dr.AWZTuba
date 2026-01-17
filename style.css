@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7f2fa;
+  color: #333;
+  text-align: center;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+  color: white;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.hero button {
+  background: white;
+  color: #7b2cbf;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.card {
+  background: white;
+  margin: 25px auto;
+  padding: 25px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  color: #7b2cbf;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  padding: 8px 0;
+}
+
+/* FOOTER */
+footer {
+  font-size: 14px;
+  padding: 20px;
+  color: #555;
+}
+
+/* CHATBOT */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  width: 230px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.chatbot p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.chatbot button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  background: #7b2cbf;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
