@@ -1,161 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Dr. Amtul Wafi Tuba | Gynaecologist & Fertility Specialist</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
 </head>
+
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#services" class="nav-link">Services</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-      <li><button class="btn-appointment" onclick="openAppointment()">Book Appointment</button></li>
-    </ul>
-  </nav>
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <ul class="nav-list">
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#services" class="nav-link">Services</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+    <li>
+      <button class="btn-appointment" onclick="openAppointment()">
+        Book an Appointment
+      </button>
+    </li>
+  </ul>
+</nav>
 
-  <!-- HEADER HERO -->
-  <header class="hero">
-    <div class="hero-left">
-      <img src="doctor.jpg" alt="Dr. Amtul Wafi Tuba" />
-    </div>
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-left">
+    <img src="doctor.jpg" alt="Dr. Amtul Wafi Tuba">
+  </div>
 
-    <div class="hero-content">
-      <h1 class="fade-in">Dr. Amtul Wafi Tuba</h1>
-      <p class="fade-in delay1">Consultant Gynaecologist • Laparoscopic Surgeon • Fertility Specialist</p>
-      <button class="btn-appointment fade-in delay2" onclick="openAppointment()">Book Appointment</button>
-    </div>
+  <div class="hero-content">
+    <h1>Dr. Amtul Wafi Tuba</h1>
+    <p>Consultant Gynaecologist • Laparoscopic Surgeon • Fertility Specialist</p>
+    <button class="btn-appointment large" onclick="openAppointment()">
+      Book an Appointment
+    </button>
+  </div>
 
-    <div id="three-container"></div>
-  </header>
+  <div id="three-container"></div>
+</header>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section fade-in-up">
-    <h2>About Dr. Amtul Wafi Tuba</h2>
-    <p>
-      Dr. Amtul Wafi Tuba is a dedicated gynaecologist, laparoscopic surgeon, and fertility specialist
-      providing compassionate, evidence-based women’s healthcare focused on patient well-being and advanced treatment options.
-    </p>
-    <p>
-       She is honored to have received the prestigious <strong>Dr. APJ Abdul Kalam Health and Medical Excellence Award (2023)</strong> recognizing her outstanding contributions to healthcare and commitment to improving women's health outcomes. 
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About</h2>
+  <p>
+    Dr. Amtul Wafi Tuba is a compassionate gynaecologist, laparoscopic surgeon,
+    and fertility specialist dedicated to advanced women’s healthcare.
+  </p>
+  <p>
+    She is honored to have received the prestigious <strong>Dr. APJ Abdul Kalam Health and Medical Excellence Award (2023)</strong> recognizing her outstanding contributions to healthcare and commitment to improving women's health outcomes.  
   With years of experience and a patient-centered approach, Dr. Tuba blends advanced surgical techniques with personalized care to ensure the best possible results for her patients.
-    </p>
-  </section>
+</p>
+</section>
 
-  <!-- SERVICES SECTION -->
-  <section id="services" class="section fade-in-up delay1">
-    <h2>Services Offered</h2>
-    <ul>
-      <li>General Gynaecology Consultation</li>
-      <li>High-Risk Pregnancy Care</li>
-      <li>Laparoscopic & Minimally Invasive Surgery</li>
-      <li>Infertility & Fertility Treatment</li>
-      <li>PCOS & Hormonal Disorders</li>
-      <li>Menstrual & Menopause Care</li>
-    </ul>
-  </section>
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2>Services</h2>
+  <ul class="service-list">
+    <li>General Gynaecology Consultation</li>
+    <li>High-Risk Pregnancy Care</li>
+    <li>Laparoscopic & Minimally Invasive Surgery</li>
+    <li>Infertility & Fertility Treatment</li>
+    <li>PCOS & Hormonal Disorders</li>
+    <li>Menstrual & Menopause Care</li>
+  </ul>
+</section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="section fade-in-up delay2">
-    <h2>Contact</h2>
-    <p>
-      📍 Clinic Address: Core Magnus Hospital, Pillar No.202, Behind D-Mart, Attapur, Hyderabad, Telangana, India<br />
-      🕒 Timings: Monday – Saturday | 09:00 AM – 08:00 PM IST<br />
-      📞 Contact: +91-8074036731
-    </p>
-  </section>
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>
+    📍 Clinic Address: Core Magnus Hospital, Pillar No.202, Behind D-Mart, Attapur, Hyderabad, Telangana, India<br>
+    🕒 Timings: Mon – Sat | 09:00 AM – 08:00 PM IST<br>
+    📞 Phone: +918074036731
+  </p>
+</section>
 
-  <!-- HIDDEN GOOGLE FORM MODAL -->
-  <div id="appointmentModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeAppointment()">&times;</span>
-      <iframe
-        src="https://forms.gle/KcaabSYBuXSeakwj8"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
-    </div>
+<!-- APPOINTMENT MODAL -->
+<div id="appointmentModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeAppointment()">&times;</span>
+    <iframe src="https://forms.gle/KcaabSYBuXSeakwj8"></iframe>
   </div>
+</div>
 
-  <!-- Floating Social Buttons -->
-  <div class="floating-buttons">
-    <a
-      href="https://wa.me/918074036731"
-      target="_blank"
-      aria-label="WhatsApp"
-      class="icon-link"><i class="fab fa-whatsapp"></i>
-      rel="noopener noreferrer"
-    >
-    </a>
-    <a
-      href="https://instagram.com/your_instagram_handle"
-      target="_blank"
-      aria-label="Instagram"
-      class="icon-link"><i class="fab fa-instagram"></i>
-      rel="noopener noreferrer"
-    >
-    </a>
-  </div>
+<!-- FLOATING SOCIAL -->
+<div class="floating-buttons">
+  <a href="https://wa.me/918074036731" target="_blank" class="social-btn whatsapp">💬</a>
+  <a href="https://instagram.com/your_instagram_handle" target="_blank" class="social-btn instagram">📸</a>
+</div>
 
-  <footer>
-    <p>This website is for appointment booking only and does not provide medical advice.</p>
-  </footer>
+<footer>
+  This website is for appointment booking only and does not provide medical advice.
+</footer>
 
-  <script>
-    // Three.js 3D rotating purple sphere
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    renderer.setSize(150, 150);
-    document.getElementById("three-container").appendChild(renderer.domElement);
-
-    const geometry = new THREE.SphereGeometry(1, 32, 32);
-    const material = new THREE.MeshStandardMaterial({
-      color: 0x7b2cbf,
-      roughness: 0.5,
-      metalness: 0.7,
-    });
-    const sphere = new THREE.Mesh(geometry, material);
-    scene.add(sphere);
-
-    const light = new THREE.PointLight(0xffffff, 1);
-    light.position.set(5, 5, 5);
-    scene.add(light);
-
-    camera.position.z = 3;
-
-    function animate() {
-      requestAnimationFrame(animate);
-      sphere.rotation.x += 0.01;
-      sphere.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    }
-    animate();
-
-    // Modal open/close
-    function openAppointment() {
-      document.getElementById("appointmentModal").style.display = "block";
-    }
-    function closeAppointment() {
-      document.getElementById("appointmentModal").style.display = "none";
-    }
-
-    // Smooth scroll for nav links
-    document.querySelectorAll(".nav-link").forEach((link) => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    });
-  </script>
+<!-- JS -->
+<script src="script.js"></script>
 </body>
 </html>
-
-
