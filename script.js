@@ -1,7 +1,7 @@
 // Book Appointment buttons open Google Form in new tab
 const bookBtn = document.getElementById('bookBtn');
 const bookBtnBottom = document.getElementById('bookBtnBottom');
-const googleFormURL = 'https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_LINK/viewform';
+const googleFormURL = 'https://forms.gle/KcaabSYBuXSeakwj8';
 
 bookBtn.addEventListener('click', () => {
   window.open(googleFormURL, '_blank');
