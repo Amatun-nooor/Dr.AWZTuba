@@ -1,104 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Dr. Amtul Wafi Tuba | Gynaecologist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dr. Amtul Wafi Tuba | Gynaecologist & Fertility Specialist</title>
 
-  <link rel="stylesheet" href="style.css" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Three.js -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/loaders/GLTFLoader.js"></script>
+<!-- Model Viewer for 3D Model -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <h3 class="logo">Dr. Amtul Wafi Tuba</h3>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><button onclick="openAppointment()">Book an Appointment</button></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-left">
-    <img src="doctor.jpeg" alt="Dr. Amtul Wafi Tuba" />
-    <h1>Dr. Amtul Wafi Tuba</h1>
-    <p>Consultant Gynaecologist • Laparoscopic Surgeon • Fertility Specialist</p>
-    <button class="primary-btn" onclick="openAppointment()">Book an Appointment</button>
-  </div>
-
-  <div class="hero-right">
-    <div id="three-container"></div>
+<!-- Navigation Bar -->
+<header class="navbar">
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="assets/doctor.png" alt="Doctor Image" />
+      <div class="doctor-info">
+        <h1>Dr. Amtul Wafi Tuba</h1>
+        <p>Consultant Gynaecologist | Laparoscopic Surgeon | Fertility Specialist</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><button id="bookBtn">Book Appointment</button></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About</h2>
-  <p>
-    Dr. Amtul Wafi Tuba is a highly experienced gynaecologist, laparoscopic surgeon,
-    and fertility specialist providing compassionate, patient-centric care.
-  </p>
-    <p>She is honored to have received the prestigious <strong>APJ Abdul Kalam Health and Medical Excellence Award (2023)</strong> recognizing her outstanding contributions to healthcare and commitment to improving women's health outcomes.  
-  With years of experience and a patient-centered approach, Dr. Tuba blends advanced surgical techniques with personalized care to ensure the best possible results for her patients.
-</p></p>
+<!-- 3D Model Section -->
+<section class="model-section container">
+  <h2>Advanced Women’s Healthcare</h2>
+  <model-viewer
+    src="assets/uterus.glb"
+    alt="3D model of uterus with stethoscope"
+    auto-rotate
+    camera-controls
+    environment-image="neutral"
+    shadow-intensity="1"
+  ></model-viewer>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
+<!-- About Section -->
+<section id="about" class="container section">
+  <h2>About Doctor</h2>
+  <p>
+    Dr. Amtul Wafi Tuba is a highly experienced Gynaecologist, Laparoscopic Surgeon,
+    and Fertility Specialist committed to delivering compassionate and advanced women’s healthcare.
+  </p>
+  <p>
+    She was honored with the <strong>APJ Abdul Kalam Health and Medical Excellence Award – 2023</strong>
+    for her outstanding contribution to women’s health.
+  </p>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="container section light-section">
   <h2>Services</h2>
-  <ul>
-    <li>General Gynaecology Consultation</li>
-    <li>High-Risk Pregnancy Care</li>
-    <li>Laparoscopic & Minimally Invasive Surgery</li>
-    <li>Infertility & Fertility Treatment</li>
-    <li>PCOS & Hormonal Disorders</li>
-    <li>Menstrual & Menopause Care</li>
-  </ul>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    📍 Core Magnus Hospital,Pillar no:202, Attapur, Hyderabad<br>
-    🕒 Mon – Sat | 09:00 AM – 08:00 PM<br>
-    📞 +91 8074036731
-  </p>
-
-  <!-- EXTRA BOOK BUTTON -->
-  <button class="primary-btn" onclick="openAppointment()">Book an Appointment</button>
-</section>
-
-<!-- APPOINTMENT MODAL -->
-<div id="appointmentModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeAppointment()">×</span>
-    <iframe src="https://forms.gle/KcaabSYBuXSeakwj8"></iframe>
+  <div class="services-list">
+    <button class="service-btn" data-service="gynae">General Gynaecology Consultation</button>
+    <button class="service-btn" data-service="laparoscopic">Laparoscopic & Minimally Invasive Surgery</button>
+    <button class="service-btn" data-service="fertility">Infertility & Fertility Treatment</button>
+    <button class="service-btn" data-service="pcos">PCOS & Hormonal Disorders</button>
+    <button class="service-btn" data-service="menopause">Menstrual & Menopause Care</button>
   </div>
-</div>
+  <div id="service-content" class="service-content">
+    <p>Select a service above to see details and images.</p>
+  </div>
+</section>
 
-<!-- FLOATING BUTTONS -->
-<div class="floating">
-  <a href="https://wa.me/918074036731" class="whatsapp">💬</a>
-  <a href="https://instagram.com/yourhandle" class="instagram">📸</a>
-  <button class="chatbot">🤖</button>
-</div>
+<!-- Contact Section -->
+<section id="contact" class="container section">
+  <h2>Contact</h2>
+  <div class="contact-info">
+    <p>📍 Clinic Address: Hyderabad</p>
+    <p>📞 Phone: +91 XXXXXXXXXX</p>
+    <p>📧 Email: doctor@email.com</p>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" title="WhatsApp" class="social-btn whatsapp">💬</a>
+    <a href="https://instagram.com/your_instagram" target="_blank" title="Instagram" class="social-btn instagram">📸</a>
+  </div>
+
+  <button id="bookBtnBottom" class="book-btn-bottom">Book Appointment</button>
+</section>
+
+<!-- Chatbot Section -->
+<section class="container section chatbot-section">
+  <h2>AI Assistant</h2>
+  <div id="chatbox" class="chatbox">
+    <div id="chatlog" class="chatlog"></div>
+    <input type="text" id="chatInput" placeholder="Ask about appointments or services..." />
+    <button id="sendBtn">Send</button>
+  </div>
+</section>
 
 <footer>
-  <p>This website is for appointment booking only and does not provide medical advice.</p>
+  <p>© 2026 Dr. Amtul Wafi Tuba. All Rights Reserved.</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
